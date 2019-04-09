@@ -43,5 +43,6 @@ var friends = [
 ];
 
 // Exporting our Student constructor. We will require it in server.js
-module.exports = Friend;
+module.exports.Friend = Friend;
+module.exports.friends = friends;
   

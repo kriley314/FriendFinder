@@ -20,11 +20,11 @@ module.exports = function( app ) {
   // API GET Requests
   // Below code handles when users "visit" a page.
 
-  // Displays all possible friends from the database - just return the reidns array
+  // Displays all possible friends from the database - just return the friends array
   // as a JSON object.
   app.get( "/api/friends", function( req, res ) {
     console.log( "Returning json for possible friends.." );
-    return res.json( friends );
+    return res.json(friends.friends);
   });
 
   // Post incoming survey results to the server - handle compatibility logic and return the JSON

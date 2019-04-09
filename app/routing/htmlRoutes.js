@@ -20,9 +20,14 @@ module.exports = function( app ) {
     });
 
     // Basic route that sends the user first to the home.html Page
+ //   app.get( "/", function( req, res ) {
+ //       console.log( "Sending to home page.." );
+ //       res.sendFile( path.join( __dirname, "../public/home.html" ));
+ //   });
+
+    // Basic route that sends the user first to the home.html Page
     app.get( "*", function( req, res ) {
-        console.log( "Sending to home page.." );
+        console.log( "For some reason, sending to home page: " + req );
         res.sendFile( path.join( __dirname, "../public/home.html" ));
     });
-
 };

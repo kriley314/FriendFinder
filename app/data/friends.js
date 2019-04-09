@@ -6,7 +6,7 @@ var path = require( "path" );
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
 app.use( express.urlencoded({ extended: true }));
@@ -14,7 +14,7 @@ app.use( express.json());
 
 // The friends array holds the "database" of friend objects. These objects will be searched to find
 // compatibility when reuests are being made to match folks up with likely friends.  Each "friend"
-// object will be structured with their name, a link to an image of the person, and an arrat of test
+// object will be structured with their name, a link to an image of the person, and an array of test
 // scores for the compatibility quiz each member responds to.
 
 // Constructor function for creating Friend objects
@@ -42,7 +42,9 @@ var friends = [
     }
 ];
 
-// Exporting our Student constructor. We will require it in server.js
-module.exports.Friend = Friend;
-module.exports.friends = friends;
+// Exporting our Friend constructor. We will require it in server.js
+module.exports = {
+    Friend: Friend,
+    friends: friends
+}
   

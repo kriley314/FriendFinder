@@ -11,6 +11,8 @@
 
 var friends = require( "../data/friends" );
 
+console.log( "apiRoutes: " + friends.friends + ":" + friends.Friend );
+
 // ===============================================================================
 // ROUTING
 // ===============================================================================
@@ -27,10 +29,47 @@ module.exports = function( app ) {
     return res.json(friends.friends);
   });
 
-  // Post incoming survey results to the server - handle compatibility logic and return the JSON
-  // object for the closest match..
+  // Post incoming survey results to the server - handle compatibility logic and output information
+  // for the closest match..
   app.post( "/api/friends", function( req, res ) {
-    console.log( "Posting incoming survey results.." );
+      console.log( "Processing incoming survey results.." );
+      var newFriend = req.body;
+      console.log( "New Friend: " + newFriend );
+
+      // First go through the current array of friends to find the closest match!!
+      var nClosestMatch = -1;
+      var nLowestDifSoFar;
+      for ( let nIndex = 0; nIndex < friends.friends.length; nIndex++ ) {
+          // Not pretty, but just go through each question and total the differences..
+          var nDif = 0;
+          for ( let nQIndex = 0; nQIndex < newFriend.testScores.length; nQIndex++ ) {
+              nDif += Math.abs( newFriend.testScores[ nQindex ] - friends.friends[ nIndex ].testScores[ nQindex ] );
+          }
+
+          // Is this our first?
+          if ( nClosestMatch === -1 ) {
+              nLowestDifSoFar = nDif;
+              nClosestMatch = nIndex;
+          } else {
+              // Not the first so really see if lower..
+              if ( nDif < nLowestDifSoFar ) {
+                  // New match!!
+                  nClosestMatch = nIndex;
+              }
+          }
+      }
+
+      // Output results..
+      if ( nClosestMatch === -1 ) {
+          // Special case!!  First entry!!  For the moment just alerting..
+          alert( "You are matchless!!  Seriously.. You are the first!!  Congratulations!!" )
+      } else {
+          // Output modal popup of closest match with name and picture..  For the moment, just name..
+          alert( "Your match is, " + friends.friends[ nClosestMatch ].name );
+      }
+
+      // Now, add newFriend to the array of friends.
+      friends.friends.push( newFriend );
   });
 }
 

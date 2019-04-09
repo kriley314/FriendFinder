@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center">Friend Finder!!</h1>
+      <h2 class="text-center">Compatability Survey</h2>
+      <hr>
+      <br>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header">
+              About You
+            </div>
+            <div class="card-body">
+              <form role="form">
+  
+                <div class="form-group">
+                  <label for="name">Name (Required)</label>
+                  <input type="text" class="form-control" id="name">
+                </div>
+  
+                <div class="form-group">
+                  <label for="imageLink">Image</label>
+                  <input type="file" class="form-control" id="imageLink">
+                </div>
+  
+                <div class="form-group">
+                  <label for="question1">MLB..  I'm National League all the way..</label><br>
+                  <select name="question1">
+                      <option value="stronglyDisagree">1 - Strongly Disagree</option>
+                      <option value="disagree">2</option>
+                      <option value="middleOfTheRoad">3</option>
+                      <option value="agree">4</option>
+                      <option value="stronglyAgree">5 - Strongly Agree</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question2">MLB..  My reason for league favoritism is because of the DH rules..</label><br>
+                    <select name="question2">
+                        <option value="stronglyDisagree">1 - Strongly Disagree</option>
+                        <option value="disagree">2</option>
+                        <option value="middleOfTheRoad">3</option>
+                        <option value="agree">4</option>
+                        <option value="stronglyAgree">5 - Strongly Agree</option>
+                    </select>
+                </div>
+  
+                <div class="form-group">
+                    <label for="question3">The lack of pass interfecence review and how that impacted the Super Bowl this past year impacted my appreciation of the NFL..</label><br>
+                    <select name="question3">
+                        <option value="stronglyDisagree">1 - Strongly Disagree</option>
+                        <option value="disagree">2</option>
+                        <option value="middleOfTheRoad">3</option>
+                        <option value="agree">4</option>
+                        <option value="stronglyAgree">5 - Strongly Agree</option>
+                    </select>
+                </div>
+  
+                <div class="form-group">
+                    <label for="question4">Targeting penalties and efforts to make the NFL as a career choice less crippling on players' future..  A good thing!!</label><br>
+                    <select name="question4">
+                        <option value="stronglyDisagree">1 - Strongly Disagree</option>
+                        <option value="disagree">2</option>
+                        <option value="middleOfTheRoad">3</option>
+                        <option value="agree">4</option>
+                        <option value="stronglyAgree">5 - Strongly Agree</option>
+                    </select>
+                </div>
+  
+                <div class="form-group">
+                    <label for="question5">NBA..  Super teams are good for the league..</label><br>
+                    <select name="question5">
+                        <option value="stronglyDisagree">1 - Strongly Disagree</option>
+                        <option value="disagree">2</option>
+                        <option value="middleOfTheRoad">3</option>
+                        <option value="agree">4</option>
+                        <option value="stronglyAgree">5 - Strongly Agree</option>
+                    </select>
+                </div>
+  
+                <div class="form-group">
+                    <label for="question6">NBA..  The league should pay attention to traveling being called!!</label><br>
+                    <select name="question6">
+                        <option value="stronglyDisagree">1 - Strongly Disagree</option>
+                        <option value="disagree">2</option>
+                        <option value="middleOfTheRoad">3</option>
+                        <option value="agree">4</option>
+                        <option value="stronglyAgree">5 - Strongly Agree</option>
+                    </select>
+                </div>
+  
+                <div class="form-group">
+                    <label for="question7">College athletics..  Players should get a piece (or bigger piece depending on your point of view) of the revenue "pie"!!</label><br>
+                    <select name="question7">
+                        <option value="stronglyDisagree">1 - Strongly Disagree</option>
+                        <option value="disagree">2</option>
+                        <option value="middleOfTheRoad">3</option>
+                        <option value="agree">4</option>
+                        <option value="stronglyAgree">5 - Strongly Agree</option>
+                    </select>
+                </div>
+  
+                <div class="form-group">
+                    <label for="question8">I prefer College sports to Professional sports..</label><br>
+                    <select name="question8">
+                        <option value="stronglyDisagree">1 - Strongly Disagree</option>
+                        <option value="disagree">2</option>
+                        <option value="middleOfTheRoad">3</option>
+                        <option value="agree">4</option>
+                        <option value="stronglyAgree">5 - Strongly Agree</option>
+                    </select>
+                </div>
+  
+                <div class="form-group">
+                    <label for="question9">I think soccer will REALLY catch on in Austin if the professional soccer team actually moves here.</label><br>
+                    <select name="question9">
+                        <option value="stronglyDisagree">1 - Strongly Disagree</option>
+                        <option value="disagree">2</option>
+                        <option value="middleOfTheRoad">3</option>
+                        <option value="agree">4</option>
+                        <option value="stronglyAgree">5 - Strongly Agree</option>
+                    </select>
+                </div>
+  
+                <div class="form-group">
+                    <label for="question10">The city of Austin should do everything it can to protect MUNY.</label><br>
+                    <select name="question10">
+                        <option value="stronglyDisagree">1 - Strongly Disagree</option>
+                        <option value="disagree">2</option>
+                        <option value="middleOfTheRoad">3</option>
+                        <option value="agree">4</option>
+                        <option value="stronglyAgree">5 - Strongly Agree</option>
+                    </select>
+                </div>
+              </form>
+            </div>  <!--Card Body-->
+          </div>   <!--Card-->
+  
+        </div>  <!--Col-lg-12-->
+      </div>  <!-- Row -->
+      <div class="text-center">
+        <a href="/survey"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-credit-card"></span>Compatibility Survey</button></a>
+      </div>
+
+    </div>  <!-- Jumbotron -->
+
+    <footer class="footer">
+      <div class="container">
+        
+        <p><a href="/api/friends">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
+         
+      </div>
+    </footer>
+
+  </div>
+</body>

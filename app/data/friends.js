@@ -28,17 +28,17 @@ var friends = [
     {
         "name" : "Charles Barkley",
         "photo" : "https://media.giphy.com/media/1k2YhdutgkQzJWnsyp/giphy.gif",
-        "testScores" : [ 3,3,2,4,1,1,5,4,3,5 ]
+        "testScores" : [ 2,2,1,3,0,0,4,3,2,4 ]
     },
     {
         "name" : "Danny Glover",
         "photo" : "https://media.giphy.com/media/29HRejgahYenVsohB5/giphy.gif",
-        "testScores" : [ 5,5,2,4,4,5,5,4,5,5 ]
+        "testScores" : [ 4,4,1,3,3,4,4,3,4,4 ]
     },
     {
         "name" : "Rachel Maddow",
         "photo" : "https://media.giphy.com/media/5PhpVhn4SUXyMLRbsQ/giphy.gif",
-        "testScores" : [ 1,1,5,5,1,5,5,3,5,5 ]
+        "testScores" : [ 0,0,4,4,0,4,4,2,4,4 ]
     }
 ];
 

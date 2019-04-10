@@ -11,8 +11,6 @@
 
 var friends = require( "../data/friends" );
 
-console.log( "apiRoutes: " + friends.friends + ":" + friends.Friend );
-
 // ===============================================================================
 // ROUTING
 // ===============================================================================
@@ -33,7 +31,8 @@ module.exports = function( app ) {
   // for the closest match..
   app.post( "/api/friends", function( req, res ) {
       console.log( "Processing incoming survey results.." );
-      var newFriend = req.body;
+      console.log( "request.body: " + req.body + ":" + req.body.length );
+      var newFriend = req.data;
       console.log( "New Friend: " + newFriend );
 
       // First go through the current array of friends to find the closest match!!
@@ -59,13 +58,14 @@ module.exports = function( app ) {
           }
       }
 
-      // Output results..
+      // Output results..  Of course, we are on the server here!!  We need to pass this info back to the client
+      // so they can display the modal pop-up with the most compatible friend's name and image.
       if ( nClosestMatch === -1 ) {
           // Special case!!  First entry!!  For the moment just alerting..
-          alert( "You are matchless!!  Seriously.. You are the first!!  Congratulations!!" )
+          console.log( "You are matchless!!  Seriously.. You are the first!!  Congratulations!!" )
       } else {
           // Output modal popup of closest match with name and picture..  For the moment, just name..
-          alert( "Your match is, " + friends.friends[ nClosestMatch ].name );
+          console.log( "Your match is, " + friends.friends[ nClosestMatch ].name );
       }
 
       // Now, add newFriend to the array of friends.

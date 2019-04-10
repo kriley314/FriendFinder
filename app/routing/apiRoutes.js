@@ -52,6 +52,7 @@ module.exports = function( app ) {
               // Not the first so really see if lower..
               if ( nDif < nLowestDifSoFar ) {
                   // New match!!
+                  nLowestDifSoFar = nDif;
                   nClosestMatch = nIndex;
               }
           }
